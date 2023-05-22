@@ -4,8 +4,8 @@ import styles from "./home.module.scss";
 
 import { IconButton } from "./button";
 import SettingsIcon from "../icons/settings.svg";
-import GithubIcon from "../icons/github.svg";
 import ChatGptIcon from "../icons/chatgpt.svg";
+import LoginIcon from "../icons/login.svg";
 import AddIcon from "../icons/add.svg";
 import CloseIcon from "../icons/close.svg";
 import MaskIcon from "../icons/mask.svg";
@@ -119,10 +119,8 @@ export function SideBar(props: { className?: string }) {
       }`}
     >
       <div className={styles["sidebar-header"]}>
-        <div className={styles["sidebar-title"]}>六七精灵</div>
-        <div className={styles["sidebar-sub-title"]}>
-          你的人工智能助理
-        </div>
+        <div className={styles["sidebar-title"]}>AI精灵</div>
+        <div className={styles["sidebar-sub-title"]}>你的人工智能助理</div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
           <ChatGptIcon />
         </div>
@@ -174,9 +172,9 @@ export function SideBar(props: { className?: string }) {
             </Link>
           </div>
           <div className={styles["sidebar-action"]}>
-            <a href={REPO_URL} target="_blank">
-              <IconButton icon={<GithubIcon />} shadow />
-            </a>
+            <Link to={Path.Login}>
+              <IconButton icon={<LoginIcon />} shadow />
+            </Link>
           </div>
         </div>
         <div>
